@@ -142,3 +142,64 @@ if (charactersArray.some(e => e.eye_color === 'blue')) {
 
 //   Using the Array.every() method on charactersArray. Check to see if all characters are male. 
 //   If they every character is male, print "All the characters are male" to the console.
+
+let allGendersAremale = "All the characters are male"
+let notAllGendersAremale = "Not All the characters are male"
+
+if (charactersArray.every(e => e.gender === 'male')) {
+    console.log(allGendersAremale);
+  }else{
+    console.log(notAllGendersAremale);
+  }
+
+
+
+
+//   Using a loop or Array.reduce() calculate the total mass of all the characters. Print the total mass to the console.
+//  Create a reuseable function with these 2 lines below
+function sumMass(acc, obj) { return acc + parseInt(obj.mass);}
+var result = charactersArray.reduce(sumMass, 0);
+
+// or create an inline function as this 1 line below
+// var result = charactersArray.reduce(function (acc, obj) { return acc + parseInt(obj.mass); }, 0);
+
+
+console.log(result);  // should be 346
+
+
+
+// Create a function called tagFavorite that takes an array as one parameter and a string that represents your favorite character's name as another parameter. 
+// This function does not need to return anything.
+
+// Create a loop inside the function that loops over the array passed in.
+// Add a property to each object in the array called favoriteCharacter and default it to false
+// If the character name matches the character name passed in, set the favoriteCharacter property to true for that character's object
+// Test your function by passing in the charactersArray and your favorite character's name when running the function. 
+// Print the charactersArray after you run the function to ensure the objects updated properly.
+
+let myFavoriteCharacter = 'Darth Vader';
+
+function addPropertyIfMissingFavoriteCharacter(array){
+
+    array.forEach(obj => {
+        if(obj.favoriteCharacter == undefined){
+        obj['favoriteCharacter'] = "false";
+        }
+    });
+}
+
+function setFavoriteCharacter(array, favCharacter){
+    array.forEach(obj => {
+        if(obj.name === favCharacter){
+        obj.favoriteCharacter = "true";
+        }
+    });
+}
+
+addPropertyIfMissingFavoriteCharacter(charactersArray);
+setFavoriteCharacter(charactersArray, myFavoriteCharacter);
+// addPropertyIfMissingFavoriteCharacter threw this in here to test that the property is not overridden, because it already exists from the Fn call above. it works as expected.
+addPropertyIfMissingFavoriteCharacter(charactersArray);
+console.log(charactersArray); 
+
+
