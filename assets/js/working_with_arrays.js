@@ -1,3 +1,6 @@
+// https://www.w3schools.com/jsref/jsref_obj_array.asp
+
+
 // What are two ways you can create an array in JavaScript?
 let createArrayOne = [1, 2, 3];
 let createArrayTwo = Array.of(1, 2, 3);
@@ -148,3 +151,4 @@ const starWarsCharactersArray = ["Yoda", 'Darth Vader', 'Leia Organa', 'Luke Sky
 const findValue = "Luke Skywalker";
 
 console.log("The Index of Luke Skywalker in the array is: " + starWarsCharactersArray.indexOf(findValue));
+

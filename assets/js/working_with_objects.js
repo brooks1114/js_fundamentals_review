@@ -104,3 +104,41 @@ charactersArray.forEach(o => console.log(o.name.toUpperCase()));
 
 
 // Using the Array.filter() method on charactersArray, create a new array called filteredCharactersArray that only contains characters where the mass is greater than 80.
+
+function massGreaterThanEighty(array){
+    return array.mass>80;
+}
+
+const filteredCharactersArray = charactersArray.filter(massGreaterThanEighty);
+console.log(filteredCharactersArray);
+
+
+// Using the Array.map() method on charactersArray, create a new array called characterNames that only contains names of each character as a string.
+
+// Not needed, but if the name were in seperate indexes, there is a join function with a concat built in:
+// function getFullName(item) {
+//     return [item.firstname,item.lastname].join(" ");
+
+function getCharacterName(array){
+    return array.name;
+}
+
+const characterNames = charactersArray.map(getCharacterName);
+console.log(characterNames);
+
+
+// Using the Array.some() method on charactersArray. Check to see if a character has blue eyes. 
+// If they do, print "Some characters have blue eyes" otherwise print "No characters have blue eyes" to the console.
+
+let someoneHasBlueEyesMessage = "Some characters have blue eyes";
+let someoneDoesNotHaveBlueEyesMessage = "No characters have blue eyes";
+
+if (charactersArray.some(e => e.eye_color === 'blue')) {
+    console.log(someoneHasBlueEyesMessage);
+  }else{
+    console.log(someoneDoesNotHaveBlueEyesMessage);
+  }
+
+
+//   Using the Array.every() method on charactersArray. Check to see if all characters are male. 
+//   If they every character is male, print "All the characters are male" to the console.
