@@ -1,0 +1,14 @@
+<!-- What is the DOM in relation to web development?
+
+The DOM (Document Object Model) is an interface that represents how your HTML and XML documents are read by the browser. 
+It allows a language (JavaScript) to manipulate, structure, and style your website.
+
+https://www.w3.org/TR/WD-DOM/introduction.html#:~:text=The%20Document%20Object%20Model%20(DOM,document%20is%20accessed%20and%20manipulated. -->
+
+
+<!-- On your own: What is the difference between document.getElementById() and document. 
+
+.querySelector()
+
+.getElementById()
+ -->
