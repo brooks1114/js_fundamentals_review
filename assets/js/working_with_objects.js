@@ -166,7 +166,11 @@ var result = charactersArray.reduce(sumMass, 0);
 
 console.log(result);  // should be 346
 
-
+let sumObjProperty = (acc, obj, property) => {
+    return acc + parseInt(obj[property])
+}
+let result2 = charactersArray.reduce((acc, obj) => sumObjProperty(acc, obj, "mass"), 0);
+console.log(result2); 
 
 // Create a function called tagFavorite that takes an array as one parameter and a string that represents your favorite character's name as another parameter. 
 // This function does not need to return anything.
